@@ -1,3 +1,12 @@
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
 
-class SplashController extends GetxController {}
+import '../../routes/app_routes.dart';
+
+class SplashController extends GetxController {
+
+  printMessage(){
+    print("Mensagem...");
+    Get.offNamed(AppRoutes.HOME);
+  }
+
+}
