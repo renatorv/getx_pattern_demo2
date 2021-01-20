@@ -9,5 +9,5 @@ CRIAR CLASSE: https://app.quicktype.io/
 
 
 
-parei https://www.youtube.com/watch?v=NTIWenchnj0&list=PLV0nOzdUS5XtParoZLgKoVwNSK9zROwuO&index=22
-aula 4
+parei https://www.youtube.com/watch?v=vT3_yMefees&list=PLV0nOzdUS5XtParoZLgKoVwNSK9zROwuO&index=23
+aula 5
