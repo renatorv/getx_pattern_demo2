@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
+import 'package:getx_pattern_demo/app/data/models/request_token.dart';
+import 'package:getx_pattern_demo/app/data/repositories/local/local_auth_repository.dart';
 // import 'package:getx_pattern_demo/app/data/repositories/authentication_repository.dart';
 import 'package:getx_pattern_demo/app/routes/app_routes.dart';
 
 class SplashController extends GetxController {
-  // final AuthenticationRepository _repository =
-  //     Get.find<AuthenticationRepository>();
+  final LocalAuthRepository _authRepository = Get.find<LocalAuthRepository>();
 
   @override
   void onReady() {
@@ -14,8 +15,11 @@ class SplashController extends GetxController {
 
   _init() async {
     try {
-      await Future.delayed(Duration(seconds: 4));
-      Get.offNamed(AppRoutes.HOME);
+      final RequestToken requestToken = await _authRepository.session;
+
+      Get.offNamed(
+        requestToken != null ? AppRoutes.HOME : AppRoutes.LOGIN,
+      );
     } catch (e) {
       print(e);
     }

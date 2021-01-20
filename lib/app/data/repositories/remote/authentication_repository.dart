@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_pattern_demo/app/data/models/request_token.dart';
-import 'package:getx_pattern_demo/app/data/providers/authentication_api.dart';
+import 'package:getx_pattern_demo/app/data/providers/remote/authentication_api.dart';
 import 'package:meta/meta.dart' show required;
 
 class AuthenticationRepository {
