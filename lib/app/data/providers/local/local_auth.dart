@@ -18,8 +18,13 @@ class LocalAuth {
 
   Future<RequestToken> getSession() async {
     final String data = await _storage.read(key: KEY);
+    
+
+
+    print('data Session.: $data');
     if (data != null) {
       final RequestToken requestToken = RequestToken.fromJson(jsonDecode(data));
+      print(' => ${requestToken.success}');
       if (DateTime.now().isBefore(requestToken.expiresAt)) {
         return requestToken;
       }

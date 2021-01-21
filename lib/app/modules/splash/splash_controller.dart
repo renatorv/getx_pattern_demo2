@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_pattern_demo/app/data/models/request_token.dart';
 import 'package:getx_pattern_demo/app/data/repositories/local/local_auth_repository.dart';
-// import 'package:getx_pattern_demo/app/data/repositories/authentication_repository.dart';
 import 'package:getx_pattern_demo/app/routes/app_routes.dart';
 
 class SplashController extends GetxController {

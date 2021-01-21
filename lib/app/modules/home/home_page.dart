@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_pattern_demo/app/data/models/movie.dart';
 import 'package:getx_pattern_demo/app/modules/home/home_controller.dart';
+import 'package:getx_pattern_demo/app/modules/home/local_widgets/movie_item.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -19,6 +21,13 @@ class HomePage extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           color: Colors.transparent,
+          child: ListView.builder(
+            itemBuilder: (ctx, index){
+              final Movie movie = _.movies[index];
+              return MovieItem(movie: movie);
+            },
+            itemCount: _.movies.length,
+          ),
         ),
       ),
     );
