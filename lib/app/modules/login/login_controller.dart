@@ -46,18 +46,33 @@ class LoginController extends GetxController {
           message = e.message;
         }
       }
-      Get.dialog(AlertDialog(
-        title: Text('Erro'),
-        content: Text(message),
-        actions: [
-          FlatButton(
-            onPressed: () {
-              Get.back();
-            },
-            child: Text('OK'),
-          ),
-        ],
-      ));
+      // Get.dialog(AlertDialog(
+      //   title: Text('Erro'),
+      //   content: Text(message),
+      //   actions: [
+      //     FlatButton(
+      //       onPressed: () {
+      //         Get.back();
+      //       },
+      //       child: Text('OK'),
+      //     ),
+      //   ],
+      // ));
+      Get.defaultDialog(
+        title: 'Atenção',
+        titleStyle: TextStyle(fontSize: 25),
+        middleText: message,
+        middleTextStyle: TextStyle(fontSize: 20),
+        backgroundColor: Colors.amber,
+        radius: 60,
+        textConfirm: 'OK',
+        confirmTextColor: Colors.white,
+        onConfirm: () {
+          Get.back();
+        },
+        buttonColor: Colors.green,
+        barrierDismissible: false,
+      );
     }
   }
 }
